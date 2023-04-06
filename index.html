@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>
+                PHP Syntax
+            </h1>
+        </header>
+        <a class="nav-link" href="#Basic_PHP_Syntax">Basic PHP Syntax</a>
+        <a class="nav-link" href="#PHP_Case_Sensitivity">PHP Case Sensitivity</a>
+        <a class="nav-link" href="#PHP_Comments">PHP Comments</a>
+        <a class="nav-link" href="#PHP_Variables">PHP Variables</a>
+        <a class="nav-link" href="#PHP_Variables_Notes">PHP Variables Notes</a>
+        <a class="nav-link" href="#PHP_Variables_Scope">PHP Variables Scope</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Basic_PHP_Syntax">
+            <header>
+                <h1>
+                    Basic PHP Syntax
+                </h1>
+            </header>
+            <p>A PHP script can be placed anywhere in the document.</p>
+            <p>A PHP script starts with <span class="code-span">&lt;?php</span> and ends with <span
+                    class="code-span">?&gt;</span> :</p>
+            <code class="code">
+&lt;?php
+    // PHP code goes here
+?&gt;
+            </code>
+            <p>
+                The default file extension for PHP files is <span class="code-span">".php"</span>.
+            </p>
+            <p>
+                A PHP file normally contains HTML tags, and some PHP scripting code.
+            </p>
+            <p>
+                Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP function
+            </p>
+            <p>
+                <span class="code-span">"echo"</span> to output the text <span class="code-span">"Hello World!"</span>
+                on a web page:
+            </p>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <code class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My first PHP page&lt;/h1&gt;
+
+    &lt;?php
+    echo "Hello World!";
+    ?&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section class="main-section" id="PHP_Case_Sensitivity">
+            <header>
+                <h1>
+                    PHP Case Sensitivity
+                </h1>
+            </header>
+            <p>
+                In PHP, keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are not case-sensitive.
+            </p>
+            <p>
+                In the example below, all three echo statements below are equal and legal:
+            </p>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <code class="code">
+                    <!DOCTYPE html>
+                    <html>
+                    <body>
+                    
+                        &lt;!?php
+                    ECHO "Hello World!<br>";
+                    echo "Hello World!<br>";
+                    EcHo "Hello World!<br>";
+                    ?&gt;!
+                    
+                    </body>
+                    </html>
+                </code>
+            </div>
+            <p>Look at the example below; only the first statement will display the value of the $color variable! This is because $color, $COLOR, and $coLOR are treated as three different variables:
+            </p>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <code class="code">
+                    &lt;?php
+$color = "red";
+echo "My car is " . $color . "<br>";
+echo "My house is " . $COLOR . "<br>";
+echo "My boat is " . $coLOR . "<br>";
+?&gt;
+
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section class="main-section"  id="PHP_Comments">
+            <header>
+                <h1>
+                    PHP Comments
+                </h1>
+            </header>
+            <h2>Comments in PHP</h2>
+            <p>
+                A comment in PHP code is a line that is not executed as a part of the program. Its only purpose is to be read by someone who is looking at the code.
+            </p>
+            <p>
+                Comments can be used to:
+            </p>
+            <ul>
+                <li>Let others understand your code</li>
+                <li>Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. Comments can remind you of what you were thinking when you wrote the code</li>
+            </ul>
+            <p>
+                PHP supports several ways of commenting:
+            </p>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <p>Syntax for single-line comments:
+                </p>
+                <code class="code">
+                    &lt;!?php<br>
+// This is a single-line comment<br>
+
+# This is also a single-line comment<br>
+?&gt;!
+                </code>
+            </div>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <p>Using comments to leave out parts of the code:
+                </p>
+                <code class="code">
+                    &lt;!?php<br>
+                    // You can also use comments to leave out parts of a code line<br>
+
+                    $x = 5 /* + 15 */ + 5;<br>
+                    echo $x;<br>
+?&gt;!
+                </code>
+            </div>
+            
+        </section>
+        <section class="main-section" id="PHP_Variables">
+            <header>
+                <h1>
+                    PHP Variables
+                </h1>
+            </header>
+            <hr>
+            <p>Variables are "containers" for storing information.</p>
+            <hr>
+            <h2>Creating (Declaring) PHP Variables</h2>
+            <p>
+                In PHP, a variable starts with the $ sign, followed by the name of the variable:
+            </p>
+            <div class="grey-container">
+                <h3>Example</h3>
+                <p>Syntax for single-line comments:
+                </p>
+                <code class="code">
+                    &lt;!?php<br>
+                    $txt = "Hello world!";<br>
+                    $x = 5;<br>
+                    $y = 10.5;<br>
+?&gt;!
+                </code>
+            </div>
+            <p>After the execution of the statements above, the variable $txt will hold the value Hello world!, the variable <span class="code-span">$x</span> will hold the value 5, and the variable <span class="code-span">$y</span> will hold the value 10.5.</p>
+            <p><b>Note:</b> When you assign a text value to a variable, put quotes around the value.</p>
+            <p><b>Note:</b> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</p>
+            <p class="annotation">
+                Think of variables as containers for storing data.
+            </p>
+        </section>
+        <hr>
+        <section class="main-section" id="PHP_Variables_Notes">
+            <header>
+                <h1>
+                    PHP Variables Notes
+                </h1>
+            </header>
+            <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</p>
+            <h2>Rules for PHP variables:</h2>
+            <ul>
+                <li>A variable starts with the $ sign, followed by the name of the variable</li>
+                <li>A variable name must start with a letter or the underscore character</li>
+                <li>A variable name cannot start with a number</li>
+                <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+                <li>Variable names are case-sensitive ($age and $AGE are two different variables)
+                </li>
+            </ul>
+            <p class="annotation">
+                Remember that PHP variable names are case-sensitive!
+            </p>
+        </section>
+        <hr>
+        <section class="main-section" id="PHP_Variables_Scope">
+            <header >
+                <h1>
+                    PHP Variables Scope
+                </h1>
+            </header>
+            <p>In PHP, variables can be declared anywhere in the script.</p>
+            <p>The scope of a variable is the part of the script where the variable can be referenced/used.</p>
+            <p>PHP has three different variable scopes:</p>
+            <ul>
+                <li>local</li>
+                <li>global</li>
+                <li>static</li>
+            </ul>
+        </section>
+        <hr>
+    </main>
+</body>
+
+</html>

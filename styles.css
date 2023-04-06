@@ -1,0 +1,111 @@
+
+
+body {
+    display: inline-grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+nav {
+    grid-column: span 3 / span 3;
+    border: 1px;
+    border-right-style: solid;
+    border-right-color: darkgrey;
+    border-width: 0.5px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    overflow: none;
+    top: 0;
+    height: 100vh; 
+}
+
+nav > header {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    font-size: 1rem;
+}
+
+.nav-link:hover{
+    background-color: grey;
+    color: white;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav > * {
+    border-bottom-style: solid;
+    border-bottom-color: darkgrey;
+    padding-left: 2rem;
+}
+
+nav > header > h1{
+    font-size: 2rem;
+}
+
+main {
+    grid-column: span 9 / span 9;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+.code {
+    padding: 1rem;
+    border-color: darkgrey;
+    border-style: solid;
+    background-color: whitesmoke;
+    width: fill;
+    display: flex;
+}
+
+.code-span {
+    background-color: whitesmoke;
+    color: salmon;
+}
+
+.grey-container{
+    background-color: lightgrey;
+    padding: 2rem;
+    margin-top: 2rem;
+
+}
+
+.grey-container > h3{
+    color: black;
+}
+
+.annotation {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    background-color: lightyellow;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    main {
+        grid-column: span 12 / span 12;
+    }
+}
